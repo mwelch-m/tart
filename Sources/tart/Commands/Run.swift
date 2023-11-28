@@ -356,7 +356,7 @@ struct Run: AsyncParsableCommand {
     }
 
     if netBridged.count > 0 {
-      func findBridgedInterface(_nat name: String) throws -> VZBridgedNetworkInterface {
+      func findBridgedInterface(_ name: String) throws -> VZBridgedNetworkInterface {
         let interface = VZBridgedNetworkInterface.networkInterfaces.first { interface in
           interface.identifier == name || interface.localizedDisplayName == name
         }
