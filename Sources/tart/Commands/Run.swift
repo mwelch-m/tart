@@ -118,7 +118,7 @@ struct Run: AsyncParsableCommand {
     }
 
     // This parameter is required for the McKinsey specific version of Tart; NAT networking is not allowed
-    if netBridged.count = 0 {
+    if netBridged.count == 0 {
       throw ValidationError("--net-bridged parameter was not specified. This is is a required parameter. Please specify a bridged network interface.")
     }
 
